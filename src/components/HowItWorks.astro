@@ -1,0 +1,113 @@
+---
+---
+
+<section id="how-it-works" class="how-it-works">
+  <div class="container">
+    <h2>How <span class="text-gradient">Bitcoin</span> Works</h2>
+    
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>The Blockchain</h3>
+          <p>Bitcoin's foundation is the blockchain, a distributed public ledger that records all transactions. This ledger is maintained by a network of computers (nodes) around the world, making it nearly impossible to alter transaction history. Every 10 minutes, new transactions are verified and added to the blockchain in "blocks."</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Mining & Consensus</h3>
+          <p>New bitcoins are created through a process called "mining." Miners use powerful computers to solve complex mathematical problems, which verifies transactions and adds them to the blockchain. This proof-of-work system ensures network security and consensus without requiring a central authority. As a reward, miners receive newly created bitcoins and transaction fees.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Bitcoin Wallets</h3>
+          <p>To use Bitcoin, you need a digital wallet. Wallets don't actually store your bitcoin; rather, they store the private keys needed to access your bitcoin address on the blockchain. These keys prove your ownership of the digital funds and allow you to make transactions. Wallets can be software (on your computer or phone), hardware devices, or even paper documents.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Transactions</h3>
+          <p>When you send bitcoin, you're creating a transaction that transfers value from your wallet address to someone else's. This transaction is broadcast to the Bitcoin network, where miners verify it and include it in a block. Once confirmed (typically after 6 blocks or about an hour), the transaction is considered irreversible.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Supply & Halving</h3>
+          <p>Bitcoin has a fixed supply cap of 21 million coins. The rate at which new bitcoins are created is cut in half approximately every four years in an event called "halving." This gradually reduces the rate of new bitcoin creation until all coins are in circulation, expected around the year 2140. This scarcity is a fundamental aspect of Bitcoin's value proposition.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card important-note">
+      <h3>Important to Understand</h3>
+      <p>Bitcoin is fundamentally different from traditional money systems:</p>
+      <ul>
+        <li><strong>No central control:</strong> No bank or government can freeze your bitcoin or prevent transactions</li>
+        <li><strong>Responsibility:</strong> You alone control your private keys, meaning you have full responsibility for your funds</li>
+        <li><strong>Irreversible:</strong> Once confirmed, Bitcoin transactions cannot be reversed or charged back</li>
+        <li><strong>Pseudonymous:</strong> While not completely anonymous, Bitcoin provides some privacy through pseudonymous addresses</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    background-color: var(--color-background-alt);
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    flex: 1;
+  }
+
+  .step-content h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .important-note {
+    background-color: var(--color-background);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .step {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

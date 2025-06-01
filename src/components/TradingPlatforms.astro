@@ -1,0 +1,170 @@
+---
+const platforms = [
+  {
+    name: "Coinbase",
+    description: "One of the most popular and user-friendly platforms for beginners. Coinbase offers a simple interface, strong security features, and is available in many countries. It allows purchases via bank transfers and credit cards.",
+    pros: ["Beginner-friendly interface", "Strong security record", "Regulated in most jurisdictions", "Insured deposits"],
+    cons: ["Higher fees than some competitors", "Limited advanced trading features in basic version"],
+    link: "https://www.coinbase.com/"
+  },
+  {
+    name: "Binance",
+    description: "The world's largest cryptocurrency exchange by trading volume. Binance offers an extensive range of cryptocurrencies and trading pairs, along with advanced features for experienced traders.",
+    pros: ["Low trading fees", "Wide selection of cryptocurrencies", "Advanced trading features", "High liquidity"],
+    cons: ["Interface can be overwhelming for beginners", "Regulatory challenges in some regions"],
+    link: "https://www.binance.com/"
+  },
+  {
+    name: "Kraken",
+    description: "A well-established exchange known for its security and regulatory compliance. Kraken offers a good balance of features for both beginners and advanced traders, with strong customer support.",
+    pros: ["Strong security features", "Regulatory compliance", "Good customer support", "Margin trading available"],
+    cons: ["Interface has steeper learning curve", "Fewer payment options in some regions"],
+    link: "https://www.kraken.com/"
+  },
+  {
+    name: "Gemini",
+    description: "Founded by the Winklevoss twins, Gemini is known for its focus on security and compliance. It's a fully regulated exchange that emphasizes safe and legitimate cryptocurrency trading.",
+    pros: ["Highly regulated and compliant", "Strong security focus", "Insurance on digital assets", "User-friendly interface"],
+    cons: ["Higher fees than some competitors", "Fewer cryptocurrencies available"],
+    link: "https://www.gemini.com/"
+  }
+];
+---
+
+<section id="trading-platforms" class="trading-platforms">
+  <div class="container">
+    <h2>Trusted <span class="text-gradient">Bitcoin Trading Platforms</span></h2>
+    
+    <p class="section-intro">
+      When it comes to buying Bitcoin safely, choosing a reputable trading platform is crucial. The following platforms have established track records for security, regulatory compliance, and user experience. Always conduct your own research before selecting a platform that best suits your needs.
+    </p>
+    
+    <div class="platforms-grid">
+      {platforms.map((platform) => (
+        <div class="card platform-card">
+          <h3>{platform.name}</h3>
+          <p>{platform.description}</p>
+          
+          <div class="platform-details">
+            <div class="pros-cons">
+              <div class="pros">
+                <h4>Pros</h4>
+                <ul>
+                  {platform.pros.map((pro) => <li>{pro}</li>)}
+                </ul>
+              </div>
+              
+              <div class="cons">
+                <h4>Cons</h4>
+                <ul>
+                  {platform.cons.map((con) => <li>{con}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <a href={platform.link} class="platform-link" target="_blank" rel="noopener noreferrer">
+            Visit Official Website
+          </a>
+        </div>
+      ))}
+    </div>
+    
+    <div class="security-tips card">
+      <h3>Security Tips When Using Trading Platforms</h3>
+      <ul>
+        <li><strong>Enable Two-Factor Authentication (2FA)</strong> - This adds an extra layer of security beyond just your password.</li>
+        <li><strong>Use a Unique, Strong Password</strong> - Never reuse passwords from other sites.</li>
+        <li><strong>Consider a Hardware Wallet</strong> - For larger amounts, move your bitcoin off exchanges to a hardware wallet.</li>
+        <li><strong>Verify Website URLs</strong> - Always check you're on the legitimate exchange website to avoid phishing attacks.</li>
+        <li><strong>Start Small</strong> - Begin with small purchases until you're comfortable with the platform.</li>
+        <li><strong>Research Local Regulations</strong> - Ensure the platform complies with regulations in your jurisdiction.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trading-platforms {
+    background-color: var(--color-background-alt);
+  }
+  
+  .section-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+  }
+  
+  .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .platform-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .platform-details {
+    margin-top: auto;
+  }
+  
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pros h4 {
+    color: #10b981; /* Green color for pros */
+  }
+  
+  .cons h4 {
+    color: #ef4444; /* Red color for cons */
+  }
+  
+  .pros ul, .cons ul {
+    font-size: 0.9rem;
+  }
+  
+  .platform-link {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .platform-link:hover {
+    background-color: var(--color-primary-light);
+    color: white;
+  }
+  
+  .security-tips {
+    background-color: #fffbeb;
+    border-left: 4px solid var(--color-secondary);
+  }
+  
+  .security-tips h3 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .platforms-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .pros-cons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

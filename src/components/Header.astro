@@ -1,0 +1,160 @@
+---
+---
+
+<header class="site-header">
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <span class="bitcoin-symbol">₿</span>
+        <span class="logo-text">Bitcoin Guide</span>
+      </div>
+      <div class="nav-links">
+        <a href="#what-is-bitcoin">About</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-invest">Why Invest</a>
+        <a href="#trading-platforms">Platforms</a>
+        <a href="#merchant-services">Merchant Services</a>
+        <a href="#get-started" class="btn">Get Started</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Simple mobile menu toggle
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  }
+  
+  // Close mobile menu when clicking on a link
+  const links = document.querySelectorAll('.nav-links a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks?.classList.remove('active');
+      menuToggle?.classList.remove('active');
+    });
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 1rem 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .bitcoin-symbol {
+    color: var(--color-secondary);
+    margin-right: 0.5rem;
+  }
+
+  .logo-text {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-links .btn {
+    color: white;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text);
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 968px) {
+    .mobile-menu-toggle {
+      display: block;
+      z-index: 101;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: white;
+      height: 100vh;
+      width: 250px;
+      flex-direction: column;
+      padding: 5rem 2rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+</style>

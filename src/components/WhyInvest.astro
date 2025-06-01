@@ -1,0 +1,109 @@
+---
+import AdBanner from './AdBanner.astro';
+---
+
+<section id="why-invest" class="why-invest">
+  <div class="container">
+    <h2>Why Consider <span class="text-gradient">Bitcoin Investment</span></h2>
+    
+    <div class="reasons-grid">
+      <div class="card reason-card">
+        <h3>Protection Against Inflation</h3>
+        <p>Unlike traditional currencies that can be printed infinitely, Bitcoin has a fixed supply cap of 21 million coins. This scarcity makes it resistant to inflation, potentially protecting your purchasing power over time as governments continue to expand their money supplies.</p>
+      </div>
+      
+      <div class="card reason-card">
+        <h3>Digital Store of Value</h3>
+        <p>Many investors view Bitcoin as "digital gold" - a store of value that can maintain or increase its worth over time. Its non-correlation with traditional financial markets has made it an increasingly popular component of diversified investment portfolios.</p>
+      </div>
+      
+      <div class="card reason-card">
+        <h3>Growing Institutional Adoption</h3>
+        <p>Major companies, financial institutions, and even countries are adding Bitcoin to their balance sheets or accepting it as payment. This increasing adoption by established entities provides additional validation and potential long-term support for Bitcoin's value.</p>
+      </div>
+      
+      <div class="card reason-card">
+        <h3>Financial Sovereignty</h3>
+        <p>Bitcoin gives you complete control over your money. With proper security practices, you can store and transfer wealth without permission from banks or governments, across borders, at any time, with minimal fees compared to traditional international transfers.</p>
+      </div>
+    </div>
+    
+    <div class="investment-considerations">
+      <h3>Important Investment Considerations</h3>
+      <div class="considerations-grid">
+        <div class="consideration">
+          <h4>Volatility</h4>
+          <p>Bitcoin is known for significant price volatility. While this can create opportunities for gains, it also means potential for substantial losses. Most experts recommend only investing what you can afford to lose.</p>
+        </div>
+        
+        <div class="consideration">
+          <h4>Long-Term Perspective</h4>
+          <p>Bitcoin has historically rewarded long-term holders ("HODLers") despite short-term volatility. Consider your investment timeframe and avoid making decisions based on short-term price movements.</p>
+        </div>
+        
+        <div class="consideration">
+          <h4>Security</h4>
+          <p>With Bitcoin, you are your own bank. This means taking responsibility for the security of your assets. Proper security practices are essential to protect your investment from theft or loss.</p>
+        </div>
+        
+        <div class="consideration">
+          <h4>Regulatory Landscape</h4>
+          <p>Regulations around cryptocurrencies continue to evolve globally. Stay informed about the legal status and tax implications of Bitcoin in your jurisdiction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<AdBanner slot="1234567890" />
+
+<style>
+  .why-invest {
+    background-color: var(--color-background);
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .reason-card {
+    height: 100%;
+  }
+
+  .reason-card h3 {
+    color: var(--color-primary);
+  }
+
+  .investment-considerations {
+    background-color: var(--color-background-alt);
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  .investment-considerations h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .considerations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .consideration h4 {
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .reasons-grid, .considerations-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

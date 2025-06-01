@@ -1,0 +1,226 @@
+---
+import AdBanner from './AdBanner.astro';
+---
+
+<section id="get-started" class="get-started">
+  <div class="container">
+    <h2>How to <span class="text-gradient">Get Started</span> with Bitcoin</h2>
+    
+    <div class="steps-grid">
+      <div class="card step-card">
+        <div class="step-number">1</div>
+        <h3>Educate Yourself</h3>
+        <p>Before investing, take time to understand Bitcoin fundamentals. Read books, follow reputable news sources, and join communities to stay informed. Knowledge is your best protection against scams and poor investment decisions.</p>
+        <div class="step-resources">
+          <h4>Recommended Resources:</h4>
+          <ul>
+            <li>"The Bitcoin Standard" by Saifedean Ammous</li>
+            <li>"Mastering Bitcoin" by Andreas M. Antonopoulos</li>
+            <li>Bitcoin.org documentation</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card step-card">
+        <div class="step-number">2</div>
+        <h3>Choose a Secure Wallet</h3>
+        <p>A wallet stores the private keys that control your bitcoin. Select a wallet based on your security needs and frequency of use.</p>
+        <div class="wallet-types">
+          <div class="wallet-type">
+            <h4>Hardware Wallets</h4>
+            <p>Physical devices that keep your keys offline. Best for security and larger amounts.</p>
+            <p>Examples: Ledger, Trezor, ColdCard</p>
+          </div>
+          <div class="wallet-type">
+            <h4>Software Wallets</h4>
+            <p>Apps on your computer or phone. More convenient but less secure.</p>
+            <p>Examples: BlueWallet, Electrum, Muun</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card step-card">
+        <div class="step-number">3</div>
+        <h3>Select a Trading Platform</h3>
+        <p>Choose a reputable exchange or platform from those listed in the previous section. Consider factors like:</p>
+        <ul>
+          <li>Fees and payment methods</li>
+          <li>Verification requirements</li>
+          <li>Available in your country</li>
+          <li>Security features</li>
+          <li>Customer support</li>
+        </ul>
+        <p>Create an account and complete the verification process, which typically requires providing identification documents to comply with regulations.</p>
+      </div>
+      
+      <div class="card step-card">
+        <div class="step-number">4</div>
+        <h3>Make Your First Purchase</h3>
+        <p>Start small and get comfortable with the process:</p>
+        <ol>
+          <li>Add a payment method (bank account, credit card, etc.)</li>
+          <li>Place an order (market or limit order)</li>
+          <li>Confirm the transaction</li>
+          <li>Wait for the order to complete</li>
+        </ol>
+        <p>Consider using a dollar-cost averaging strategy (regular small purchases) rather than trying to time the market.</p>
+      </div>
+      
+      <div class="card step-card">
+        <div class="step-number">5</div>
+        <h3>Secure Your Investment</h3>
+        <p>After purchasing, transfer your bitcoin from the exchange to your personal wallet. This protects your investment from exchange hacks and gives you full control of your assets.</p>
+        <div class="security-checklist">
+          <h4>Essential Security Practices:</h4>
+          <ul>
+            <li>Never share your private keys or recovery phrase</li>
+            <li>Keep your recovery phrase written on paper (not digital) and stored securely</li>
+            <li>Make backup copies of your recovery phrase stored in different secure locations</li>
+            <li>Enable 2FA on all accounts</li>
+            <li>Use strong, unique passwords</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="investment-strategy card">
+      <h3>Developing a Bitcoin Investment Strategy</h3>
+      <p>
+        Bitcoin investment requires a clear strategy based on your financial goals, risk tolerance, and investment horizon. Consider these approaches:
+      </p>
+      
+      <div class="strategies">
+        <div class="strategy">
+          <h4>Dollar-Cost Averaging (DCA)</h4>
+          <p>Invest a fixed amount at regular intervals regardless of price. This strategy reduces the impact of volatility and removes the stress of timing the market.</p>
+        </div>
+        
+        <div class="strategy">
+          <h4>HODL (Hold On for Dear Life)</h4>
+          <p>A long-term approach of buying and holding through market volatility. This strategy is based on the belief in Bitcoin's long-term value proposition.</p>
+        </div>
+        
+        <div class="strategy">
+          <h4>Portfolio Allocation</h4>
+          <p>Determine what percentage of your investment portfolio to allocate to Bitcoin. Many advisors suggest treating it as a high-risk, high-reward component of a diversified portfolio.</p>
+        </div>
+      </div>
+      
+      <div class="risk-warning">
+        <p><strong>Remember:</strong> Never invest more than you can afford to lose. Bitcoin remains a volatile asset, and while many believe in its long-term potential, there are significant risks involved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<AdBanner slot="2345678901" />
+
+<style>
+  .get-started {
+    background-color: var(--color-background);
+  }
+  
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .step-card {
+    position: relative;
+    padding-top: 3rem;
+    height: 100%;
+  }
+  
+  .step-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .wallet-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .wallet-type h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
+  
+  .wallet-type p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .security-checklist {
+    margin-top: 1rem;
+  }
+  
+  .investment-strategy {
+    background-color: var(--color-background-alt);
+  }
+  
+  .strategies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 1.5rem 0;
+  }
+  
+  .strategy h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .risk-warning {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .risk-warning p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  ol, ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 968px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .strategies {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wallet-types {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

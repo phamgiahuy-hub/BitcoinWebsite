@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Load fonts after preload -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+    
+    <!-- Defer non-critical JavaScript -->
+    <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6683615425323300" crossorigin="anonymous"></script>
+    
+    <!-- Intersection Observer for lazy loading -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              if (entry.target.classList.contains('ad-banner')) {
+                const ad = entry.target.querySelector('.adsbygoogle');
+                if (ad && !ad.hasAttribute('data-adsbygoogle-status')) {
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                }
+              }
+            }
+          });
+        }, { 
+          rootMargin: '50px',
+          threshold: 0.1
+        });
+
+        // Observe all sections and cards for animation
+        document.querySelectorAll('section, .card').forEach(el => observer.observe(el));
+        
+        // Observe ad banners for lazy loading
+        document.querySelectorAll('.ad-banner').forEach(ad => observer.observe(ad));
+      });
+    </script>
+    
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import WhatIsBitcoin from '../components/WhatIsBitcoin.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyInvest from '../components/WhyInvest.astro';
+import TradingPlatforms from '../components/TradingPlatforms.astro';
+import GetStarted from '../components/GetStarted.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+import AdBanner from '../components/AdBanner.astro';
+import MerchantServices from '../components/MerchantServices.astro';
+---
+
+<Layout 
+  title="Buy Bitcoin Safely | Bitcoin Investment Guide | Bitcoin Merchant Services & Trading Platforms"
+  description="Complete guide to buying Bitcoin safely, cryptocurrency investment, and Bitcoin merchant services. Learn about trusted trading platforms and merchant accounts."
+>
+  <Header />
+  <main>
+    <Hero />
+    <AdBanner slot="ad-slot-1" />
+    <WhatIsBitcoin />
+    <AdBanner slot="ad-slot-2" />
+    <HowItWorks />
+    <AdBanner slot="ad-slot-3" />
+    <WhyInvest />
+    <AdBanner slot="ad-slot-4" />
+    <TradingPlatforms />
+    <AdBanner slot="ad-slot-5" />
+    <MerchantServices />
+    <AdBanner slot="ad-slot-6" />
+    <GetStarted />
+    <AdBanner slot="ad-slot-7" />
+    <FAQ />
+    <AdBanner slot="ad-slot-8" />
+  </main>
+  <AdBanner slot="ad-slot-9" />
+  <Footer />
+  <AdBanner slot="ad-slot-10" />
+</Layout>
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (!targetId) return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+      
+      window.scrollTo({
+        top: targetElement.offsetTop - 70,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>

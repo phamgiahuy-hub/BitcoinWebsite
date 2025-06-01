@@ -1,0 +1,148 @@
+---
+---
+<!-- Ensure component is recognized by Astro build system -->
+
+<section id="merchant-services" class="merchant-services">
+  <div class="container">
+    <h2>Bitcoin <span class="text-gradient">Merchant Services</span></h2>
+    
+    <div class="content-grid">
+      <div class="card merchant-intro">
+        <h3>Accept Bitcoin Payments for Your Business</h3>
+        <p>
+          Bitcoin merchant services enable businesses to accept cryptocurrency payments, expanding their customer base and reducing transaction fees. These services provide the infrastructure needed to process Bitcoin payments securely and efficiently.
+        </p>
+      </div>
+
+      <div class="merchant-providers">
+        <div class="card provider-card">
+          <h3>BitPay</h3>
+          <p>Industry leader in cryptocurrency payment processing, offering:</p>
+          <ul>
+            <li>Same-day bank deposits in local currency</li>
+            <li>Protection from price volatility</li>
+            <li>Easy integration with popular e-commerce platforms</li>
+            <li>Detailed transaction reporting</li>
+          </ul>
+        </div>
+
+        <div class="card provider-card">
+          <h3>Coinbase Commerce</h3>
+          <p>Trusted solution for cryptocurrency payments with features like:</p>
+          <ul>
+            <li>No monthly fees</li>
+            <li>Multiple cryptocurrency support</li>
+            <li>Direct deposits to your Coinbase account</li>
+            <li>Simple API integration</li>
+          </ul>
+        </div>
+
+        <div class="card provider-card">
+          <h3>BTCPay Server</h3>
+          <p>Open-source payment processor offering:</p>
+          <ul>
+            <li>Complete control over your payments</li>
+            <li>No third-party dependencies</li>
+            <li>Zero transaction fees</li>
+            <li>Self-hosted solution</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="merchant-benefits card">
+        <h3>Benefits of Bitcoin Merchant Accounts</h3>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <h4>Lower Fees</h4>
+            <p>Reduce transaction costs compared to traditional payment processors</p>
+          </div>
+          
+          <div class="benefit">
+            <h4>Global Reach</h4>
+            <p>Accept payments from customers worldwide without currency conversion hassles</p>
+          </div>
+          
+          <div class="benefit">
+            <h4>No Chargebacks</h4>
+            <p>Bitcoin transactions are irreversible, eliminating chargeback fraud</p>
+          </div>
+          
+          <div class="benefit">
+            <h4>Fast Settlement</h4>
+            <p>Receive payments quickly without lengthy bank processing times</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .merchant-services {
+    background-color: var(--color-background);
+    padding: var(--section-padding);
+  }
+
+  .content-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .merchant-providers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .provider-card {
+    height: 100%;
+  }
+
+  .provider-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .provider-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .provider-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .provider-card li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .benefit h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 968px) {
+    .merchant-providers {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

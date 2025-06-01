@@ -1,0 +1,101 @@
+---
+const faqs = [
+  {
+    question: "Is Bitcoin safe to buy?",
+    answer: "Bitcoin itself is secure due to its cryptographic nature and decentralized blockchain. However, the safety of buying Bitcoin depends largely on the platform you use and your own security practices. Using reputable exchanges, enabling strong security measures, and properly storing your Bitcoin in a secure wallet significantly reduces risks. The technology is secure, but user practices determine safety."
+  },
+  {
+    question: "How much Bitcoin should I buy?",
+    answer: "You should only invest what you can afford to lose. For beginners, starting with a small amount allows you to learn the process without significant financial risk. Some investors follow the 1-5% rule, allocating that percentage of their investment portfolio to cryptocurrencies. Consider your financial situation, risk tolerance, and investment goals before deciding on an amount."
+  },
+  {
+    question: "Is Bitcoin a good investment?",
+    answer: "Bitcoin has shown significant long-term growth since its creation, outperforming many traditional assets. However, it comes with high volatility and risk. Whether Bitcoin is a good investment depends on your financial goals, risk tolerance, and investment timeline. Many financial advisors suggest viewing it as a high-risk, potentially high-reward component of a diversified portfolio rather than a core investment."
+  },
+  {
+    question: "How do I store Bitcoin safely?",
+    answer: "For maximum security, use a hardware wallet (like Ledger or Trezor) which keeps your private keys offline. For smaller amounts or frequent use, secure software wallets are convenient. Always backup your wallet's recovery phrase on paper (not digitally) and store it securely. Never share your private keys or recovery phrase with anyone, and use strong passwords and two-factor authentication for any online services related to your Bitcoin."
+  },
+  {
+    question: "Is Bitcoin legal?",
+    answer: "Bitcoin's legal status varies by country. In most developed nations, Bitcoin is legal to own and trade, though it may have different regulatory classifications (commodity, property, currency, etc.). Some countries have restrictions on how it can be used, while a few have banned it entirely. Always check the current regulations in your jurisdiction before investing."
+  },
+  {
+    question: "Can Bitcoin be converted back to cash?",
+    answer: "Yes, Bitcoin can be converted to traditional currency (USD, EUR, etc.) through cryptocurrency exchanges, Bitcoin ATMs, or peer-to-peer platforms. The process typically involves selling your Bitcoin on an exchange and withdrawing the funds to your bank account. Conversion speed and fees vary between platforms, and you may need to pay capital gains tax on any profit when converting back to fiat currency, depending on your country's regulations."
+  }
+];
+---
+
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+    
+    <div class="faq-container">
+      {faqs.map((faq, index) => (
+        <details class="faq-item" open={index === 0}>
+          <summary>{faq.question}</summary>
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    background-color: var(--color-background);
+  }
+  
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 0;
+  }
+  
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  
+  summary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding-right: 2rem;
+    position: relative;
+    list-style: none;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s;
+  }
+  
+  details[open] summary::after {
+    transform: rotate(45deg);
+  }
+  
+  .faq-answer {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+  }
+  
+  .faq-answer p {
+    margin-bottom: 0;
+  }
+</style>

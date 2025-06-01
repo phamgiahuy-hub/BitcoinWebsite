@@ -1,0 +1,122 @@
+---
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>
+        <span class="text-gradient">Buy Bitcoin Safely</span> 
+        <br />The Complete Guide to Bitcoin Investment
+      </h1>
+      <p class="hero-text">
+        Discover everything you need to know about Bitcoin - from understanding the technology to making your first investment on trusted platforms. Start your journey to financial freedom today.
+      </p>
+      <div class="hero-buttons">
+        <a href="#get-started" class="btn">Get Started</a>
+        <a href="#trading-platforms" class="btn btn-secondary">Explore Platforms</a>
+        <a href="https://cryptobitcoinsafely.netlify.app" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Learn About Bitcoin</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bitcoin graphic illustration" loading="eager" fetchpriority="high" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--color-background-alt);
+    background-image: 
+      radial-gradient(circle at 80% 10%, rgba(247, 147, 26, 0.1), transparent 400px),
+      radial-gradient(circle at 20% 90%, rgba(63, 81, 181, 0.1), transparent 400px);
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  .hero-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 45%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+  .hero-image img {
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 1024px) {
+    .hero {
+      padding-top: 4rem;
+      text-align: center;
+      min-height: auto;
+    }
+
+    .hero-content {
+      max-width: 100%;
+    }
+
+    .btn {
+      min-width: 200px;
+    }
+
+    .hero-image {
+      position: relative;
+      max-width: 80%;
+      margin: 3rem auto 0;
+      transform: none;
+      top: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 0;
+    }
+    
+    .hero-image {
+      max-width: 100%;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .btn {
+      width: 100%;
+      margin: 0;
+    }
+  }
+</style>

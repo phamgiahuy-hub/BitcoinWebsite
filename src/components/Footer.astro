@@ -1,0 +1,146 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="bitcoin-symbol">₿</span>
+        <span class="logo-text">Bitcoin Guide</span>
+      </div>
+      
+      <p class="footer-disclaimer">
+        This website provides general information for educational purposes only and is not intended to be investment advice. Cryptocurrency investments are volatile and high risk. Always conduct your own research and consult with a qualified financial advisor before making any investment decisions.
+      </p>
+      
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#what-is-bitcoin">What is Bitcoin</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#why-invest">Why Invest</a></li>
+            <li><a href="#trading-platforms">Trading Platforms</a></li>
+            <li><a href="#get-started">Get Started</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://bitcoin.org/" target="_blank" rel="noopener noreferrer">Bitcoin.org</a></li>
+            <li><a href="https://www.blockchain.com/explorer" target="_blank" rel="noopener noreferrer">Blockchain Explorer</a></li>
+            <li><a href="https://www.coindesk.com/" target="_blank" rel="noopener noreferrer">CoinDesk News</a></li>
+            <li><a href="https://bitcoin.stackexchange.com/" target="_blank" rel="noopener noreferrer">Bitcoin Stack Exchange</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Bitcoin Guide. All information provided for educational purposes only.</p>
+      <p class="last-updated">Last Updated: May 2025</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-background-alt);
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bitcoin-symbol {
+    color: var(--color-secondary);
+    margin-right: 0.5rem;
+  }
+  
+  .logo-text {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .footer-disclaimer {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    max-width: 800px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+  
+  .footer-section a:hover {
+    color: var(--color-primary);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+  }
+  
+  @media (max-width: 968px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>
